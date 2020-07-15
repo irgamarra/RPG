@@ -6,7 +6,7 @@ A prototype of gameplay for a RPG game in which players have to move their team 
 
 A movement system has been added in which the player can move a group of cubes around an enemy.
 
-![Watch the video](https://gfycat.com/PopularGreatGordonsetter)
+![](https://thumbs.gfycat.com/PopularGreatGordonsetter-size_restricted.gif)
 
 # Next to do:
 
