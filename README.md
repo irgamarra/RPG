@@ -9,7 +9,7 @@ A movement system has been added in which the player can move a group of cubes a
 
 ![](https://thumbs.gfycat.com/PopularGreatGordonsetter-size_restricted.gif)
 
-An attack has been added: A bouncing ball. It disappears after bouncing 3 times or leaving the area.
+An attack has been added: A bouncing ball. It disappears after bouncing 3 times or after leaving the area.
 ![](https://thumbs.gfycat.com/SardonicDimwittedAlpinegoat-size_restricted.gif)
 
 # Next to do:
