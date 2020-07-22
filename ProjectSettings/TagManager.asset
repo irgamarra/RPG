@@ -4,9 +4,8 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Spot 0
-  - Spot 1
   - Spots
+  - Path
   layers:
   - Default
   - TransparentFX

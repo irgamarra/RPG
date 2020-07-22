@@ -8,6 +8,7 @@ public class Allies_Movement : MonoBehaviour
     public float speed = 1.0f;
     public GameObject focusedEnemy;
     public int initialSpotNumber;
+    public string myInput;
 
     //Private variables
     private int currentSpotNumber;
@@ -21,15 +22,33 @@ public class Allies_Movement : MonoBehaviour
 
     void Update()
     {
+        //To look at enemy
+        if (focusedEnemy != null)
+            transform.LookAt(focusedEnemy.transform);
+
         Debug.Log(currentSpotNumber);
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetAxis("Horizontal") > 0)
         {
             MoveTo(NextSpotNumber(1));
         }
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetAxis("Horizontal") < 0)
         {
             MoveTo(NextSpotNumber(0));
         }
+        if (myInput != null)
+        {
+            if (Input.GetButton(myInput))
+            {
+                //TODO: to not be able to shoot more than once
+                GameObject ball = GameObject.Find("Allies/Attacks/Ball");
+                if (!ball.activeSelf)
+                {
+                    Vector3 inFront = transform.position+(transform.forward*2);
+                    Attacks.Ball(inFront);
+                }
+            }
+        }
+
     }
 
     void MoveTo(int targetSpotNum)
@@ -45,10 +64,6 @@ public class Allies_Movement : MonoBehaviour
         
         //To move character
         transform.position = Vector3.MoveTowards(transform.position, destination, step);
-        
-        //To look at enemy
-        if (focusedEnemy != null)
-            transform.LookAt(focusedEnemy.transform);
     }
 
     private List<Transform> GetSpots()
