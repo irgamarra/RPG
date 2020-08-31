@@ -5,15 +5,16 @@ The initial idea is a mix of Chrono Trigger with Undertale in 3D, in which each 
 
 # Current state:
 
-A movement system has been added in which the player can move a group of cubes around an enemy.
-
-![](https://thumbs.gfycat.com/PopularGreatGordonsetter-size_restricted.gif)
-
 An attack has been added: A bouncing ball. It disappears after bouncing 3 times or after leaving the area.
 ![](https://thumbs.gfycat.com/SardonicDimwittedAlpinegoat-size_restricted.gif)
 
+Turn system: After using "bouncing ball", the enemy will attack the player with that same attack (the enemy still does not aim his attack)
+![](https://thumbs.gfycat.com/DetailedSomberEquine-size_restricted.gif)
+
 # Next to do:
 
+- A understandable GUI
 - Enemy attacks
 - A life system
-- A turn system
+- Colour based attacks
+- 4 characters with unique attacks
