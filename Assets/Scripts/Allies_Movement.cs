@@ -26,7 +26,6 @@ public class Allies_Movement : MonoBehaviour
         if (focusedEnemy != null)
             transform.LookAt(focusedEnemy.transform);
 
-        Debug.Log(currentSpotNumber);
         if (Input.GetAxis("Horizontal") > 0)
         {
             MoveTo(NextSpotNumber(1));
@@ -35,20 +34,6 @@ public class Allies_Movement : MonoBehaviour
         {
             MoveTo(NextSpotNumber(0));
         }
-        if (myInput != null)
-        {
-            if (Input.GetButton(myInput))
-            {
-                //TODO: to not be able to shoot more than once
-                GameObject ball = GameObject.Find("Allies/Attacks/Ball");
-                if (!ball.activeSelf)
-                {
-                    Vector3 inFront = transform.position+(transform.forward*2);
-                    Attacks.Ball(inFront);
-                }
-            }
-        }
-
     }
 
     void MoveTo(int targetSpotNum)

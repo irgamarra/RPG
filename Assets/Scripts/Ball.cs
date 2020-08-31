@@ -5,16 +5,16 @@ using UnityEngine;
 public class Ball : MonoBehaviour
 {
     public int bounces = 3;
+    public int destroyedBalls = 0;
     private int maxBounces;
     private Rigidbody rb = null;
-    // Start is called before the first frame update
+    
     void Start()
     {
         maxBounces = bounces;
         rb = GetComponent<Rigidbody>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
     }
@@ -24,7 +24,7 @@ public class Ball : MonoBehaviour
         bounces--;
         if(bounces == 0)
         {
-            DestroyBall();
+            Destroy(this.gameObject);
         }
     }
 
@@ -32,10 +32,14 @@ public class Ball : MonoBehaviour
     {
         if(other.gameObject.tag == "Path")
         {
-            DestroyBall();
+            Destroy(this.gameObject);
         }
     }
 
+    private void OnDestroy()
+    {
+        
+    }
     private void DestroyBall()
     {
         if (rb != null)

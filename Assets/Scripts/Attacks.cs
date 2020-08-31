@@ -4,31 +4,44 @@ using UnityEngine;
 
 public class Attacks : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public GameObject ballGO;
+    public UI ui;
+    public GameObject turn;
+    private GameObject bullet;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    //To know how many bullets the player triggered
+    private bool bulletsTriggered = false;
+    //To know how many bullets the attack can trigger
+    private int bulletsNumber = -1; //We start at -1 to forbid the player to shoot at 0
+    
     //TODO: Look at diferent enemies
-    public static void Ball(Vector3 spawn)
+    public void Ball(Vector3 spawn, Quaternion rotation, GameObject target)
     {
-        GameObject ball = GameObject.Find("Allies/Attacks/Ball");
-        GameObject enemy = GameObject.Find("Enemies/Enemy");
+        if (bulletsNumber == -1)
+            bulletsNumber = 1;
+        //IF there is not other bullets and the player can shoot more...
+        if (bullet == null && bulletsNumber > 0)
+        {
+            //Where to spawn
+            bullet = Instantiate(ballGO, spawn, rotation) as GameObject;
+            bullet.transform.parent = this.transform;
 
-        //Where to spawn
-        ball.transform.position = spawn;
-        ball.transform.LookAt(enemy.transform);
+            //How to move
+            bullet.SetActive(true);
+            Rigidbody rb = bullet.GetComponent<Rigidbody>();
 
-        //How to move
-        ball.SetActive(true);
-        Rigidbody rb = ball.GetComponent<Rigidbody>();
-        
-        rb.AddRelativeForce(0, 0, 6.0f, ForceMode.Impulse);
+            //TODO: Look at a target(?)
+            rb.AddRelativeForce(0, 0, 6.0f, ForceMode.Impulse);
+
+            bulletsNumber--;
+        }
+    }
+    public void Update()
+    {
+        if (bullet == null && bulletsNumber == 0)
+        {
+            bulletsNumber = -1;
+            Turns.EndTurn(turn, ui);
+        }
     }
 }
