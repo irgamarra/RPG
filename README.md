@@ -13,7 +13,7 @@ Turn system: After using "bouncing ball", the enemy will attack the player with 
 
 # Next to do:
 
-- A understandable GUI
+- An understandable GUI
 - Enemy attacks
 - A life system
 - Colour based attacks
