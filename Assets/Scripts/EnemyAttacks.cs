@@ -28,7 +28,10 @@ public class EnemyAttacks : MonoBehaviour
 
             GameObject enemy = GameObject.Find("Enemies/Enemy");
             Vector3 inFront = enemy.transform.position + (enemy.transform.forward * 2);
-            attacks.Ball(inFront, enemy.transform.rotation, target);
+
+            //Start attack of a specific colour
+            string colour = enemy.GetComponent<Properties>().properties.colour;
+            attacks.BouncingBall(inFront, enemy.transform.rotation, target,1,colour);
         }
     }
 }

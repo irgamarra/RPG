@@ -28,7 +28,7 @@ public class PlayerAttacks : MonoBehaviour
         //Player's turn
         if (currentTurn == ui.turn[0])
         {
-            //Player's attacks
+            //Player's attacks Clock wise
 
             if (Input.GetButton("Fire4"))
             {
@@ -36,9 +36,43 @@ public class PlayerAttacks : MonoBehaviour
                 //TODO: To select a target
                 GameObject target = GameObject.Find("Allies/Cube_A").gameObject;
 
-                //TODO: to not be able to shoot more than once
+                //TODO: to have different attacks/to attack depending on the character
+                //TODO: COLOUR NOT HARDCODED
                 Vector3 inFront = player.transform.position + (player.transform.forward * 2);
-                attacks.Ball(inFront, player.transform.rotation, target);
+                attacks.BouncingBall(inFront, player.transform.rotation, target, 2, "yellow");
+            }
+
+            if (Input.GetButton("Fire2"))
+            {
+                GameObject player = GameObject.Find("Allies/Cube_B").gameObject;
+                //TODO: To select a target
+                GameObject target = GameObject.Find("Allies/Cube_B").gameObject;
+
+                
+                Vector3 inFront = player.transform.position + (player.transform.forward * 2);
+                attacks.BouncingBall(inFront, player.transform.rotation, target, 1, "red");
+            }
+
+            if (Input.GetButton("Fire1"))
+            {
+                GameObject player = GameObject.Find("Allies/Cube_C").gameObject;
+                //TODO: To select a target
+                GameObject target = GameObject.Find("Allies/Cube_C").gameObject;
+
+                
+                Vector3 inFront = player.transform.position + (player.transform.forward * 2);
+                attacks.PiercingBall(inFront, player.transform.rotation, target, 1, "colourless");
+            }
+
+            if (Input.GetButton("Fire3"))
+            {
+                GameObject player = GameObject.Find("Allies/Cube_D").gameObject;
+                //TODO: To select a target
+                GameObject target = GameObject.Find("Allies/Cube_D").gameObject;
+
+                
+                Vector3 inFront = player.transform.position + (player.transform.forward * 2);
+                attacks.PiercingBall(inFront, player.transform.rotation, target,1, "blue");
             }
         }
         else if(currentTurn != ui.turn[1])

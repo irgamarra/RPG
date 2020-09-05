@@ -66,7 +66,10 @@
     <Compile Include="Assets\Scripts\Attacks.cs" />
     <Compile Include="Assets\Scripts\Ball.cs" />
     <Compile Include="Assets\Scripts\EnemyAttacks.cs" />
+    <Compile Include="Assets\Scripts\PiercingBall.cs" />
     <Compile Include="Assets\Scripts\PlayerAttacks.cs" />
+    <Compile Include="Assets\Scripts\Properties.cs" />
+    <Compile Include="Assets\Scripts\SOProperties.cs" />
     <Compile Include="Assets\Scripts\Turns.cs" />
     <Compile Include="Assets\Scripts\UI.cs" />
     <Reference Include="UnityEngine">

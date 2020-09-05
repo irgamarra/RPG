@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Spots
   - Path
+  - Enemy
   layers:
   - Default
   - TransparentFX
