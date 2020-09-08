@@ -12,6 +12,7 @@ The player has 3 attacks:
 - Colourless attack (Makes the enemy colourless for attacks to act as if the enemy was the same colour as the said attacks)
 
 This video ilustrates the three attacks and how they interact with the colour mechanic. The yellow cube has two attacks per turn and the enemy just shoots a ball without aiming.
+
 Blue: Piercing ball. Yellow and Red: Bouncing ball. Green: Colourless attack 
 ![](https://thumbs.gfycat.com/NewQuestionableAltiplanochinchillamouse-size_restricted.gif)
 
