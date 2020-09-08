@@ -17,6 +17,7 @@ Blue: Piercing ball. Yellow and Red: Bouncing ball. Green: Colourless attack
 
 # Next to do:
 
+- To optimize Bouncing Attack for it to not miss their target after bouncing.
 - An understandable GUI
 - Enemy attacks
 - A life system
