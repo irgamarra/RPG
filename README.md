@@ -6,15 +6,16 @@ The initial idea is a mix of Chrono Trigger with Undertale in 3D, in which each 
 # Current state:
 The player can move 4 characters around an enemy.
 
-An attack has been added: A bouncing ball. It disappears after bouncing 3 times or after leaving the area.
+The player has 3 attacks: 
+- Piercing ball (that piercess if the enemy is the same colour as the attack)
+- Bouncing ball (That bouncess if the enemy is the same colour as the attack)
+- Colourless attack (Makes the enemy colourless for attacks to act as if the enemy was the same colour as the said attacks)
 
-Turn system: After using "bouncing ball", the enemy will attack the player with that same attack (the enemy still does not aim his attack)
-![](https://thumbs.gfycat.com/DetailedSomberEquine-size_restricted.gif)
+This video ilustrates the three attacks and how they interact with the colour mechanic. The yellow cube has two attacks per turn.
+![](https://thumbs.gfycat.com/NewQuestionableAltiplanochinchillamouse-size_restricted.gif)
 
 # Next to do:
 
 - An understandable GUI
 - Enemy attacks
 - A life system
-- Colour based attacks
-- 4 characters with unique attacks
