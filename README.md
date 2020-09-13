@@ -22,3 +22,4 @@ Blue: Piercing ball. Yellow and Red: Bouncing ball. Green: Colourless attack
 - An understandable GUI
 - Enemy attacks
 - A life system
+- A way for the player to see what button uses each character.
