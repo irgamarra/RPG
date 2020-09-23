@@ -9,4 +9,5 @@ public class SOProperties : ScriptableObject
     public string colour;
     public bool ally;
     public bool enemy;
+    public int hp;
 }

@@ -16,3 +16,4 @@ MonoBehaviour:
   colour: green
   ally: 1
   enemy: 0
+  hp: 100

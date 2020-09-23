@@ -65,7 +65,9 @@
     <Compile Include="Assets\Scripts\Allies_Movement.cs" />
     <Compile Include="Assets\Scripts\Attacks.cs" />
     <Compile Include="Assets\Scripts\Ball.cs" />
+    <Compile Include="Assets\Scripts\ColourlessBall.cs" />
     <Compile Include="Assets\Scripts\EnemyAttacks.cs" />
+    <Compile Include="Assets\Scripts\HealthBar.cs" />
     <Compile Include="Assets\Scripts\PiercingBall.cs" />
     <Compile Include="Assets\Scripts\PlayerAttacks.cs" />
     <Compile Include="Assets\Scripts\Properties.cs" />
