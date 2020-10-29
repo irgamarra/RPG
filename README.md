@@ -16,6 +16,11 @@ This video ilustrates the three attacks and how they interact with the colour me
 Blue: Piercing ball. Yellow and Red: Bouncing ball. Green: Colourless attack 
 ![](https://thumbs.gfycat.com/NewQuestionableAltiplanochinchillamouse-size_restricted.gif)
 
+
+Enemy's attack patterns:
+
+![](https://thumbs.gfycat.com/BetterLimpingCanary-size_restricted.gif)
+
 # Next to do:
 
 - To optimize Bouncing Attack for it to not miss their target after bouncing.
