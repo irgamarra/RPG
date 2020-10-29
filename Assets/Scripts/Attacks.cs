@@ -16,7 +16,7 @@ public class Attacks : MonoBehaviour
     
     //TODO: Look at diferent enemies
     //TODO: More relaviable method to get the colour (Scriptable objects)!!!!!!
-    public void BouncingBall(Vector3 spawn, Quaternion rotation, GameObject target, string colour, bool multiBalls = false) //multiballs If there can be more than one ball at the same time
+    public void BouncingBall(Vector3 spawn, Quaternion rotation, string colour, bool multiBalls = false) //multiballs If there can be more than one ball at the same time
     {
         //If the programmer forgot to set a value to bulletsNumber 
         if (bulletsNumber == -1)
@@ -26,7 +26,6 @@ public class Attacks : MonoBehaviour
         //IF there is not other bullet on screen and the player can shoot more...
         else if (bullet == null || multiBalls)
         {
-            Debug.Log("Bullets:" + bulletsNumber);
             //To instantiate a prefab and get its RigidBody
             Rigidbody rb = InstantiateAttack(bouncingBall, spawn, rotation);
 
@@ -39,7 +38,7 @@ public class Attacks : MonoBehaviour
             bulletsNumber--;
         }
     }
-    public void PiercingBall(Vector3 spawn, Quaternion rotation, GameObject target, string colour)
+    public void PiercingBall(Vector3 spawn, Quaternion rotation, string colour)
     {
 
         //If the programmer forgot to set a value to bulletsNumber 
@@ -62,7 +61,7 @@ public class Attacks : MonoBehaviour
         }
 
     }
-    public void ColourlessBall(Vector3 spawn, Quaternion rotation, GameObject target)
+    public void ColourlessBall(Vector3 spawn, Quaternion rotation)
     {
 
         //If the programmer forgot to set a value to bulletsNumber 

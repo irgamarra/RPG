@@ -18,4 +18,15 @@ public static class Turns
         else if (Turn.GetComponent<Text>().text == ui.turn[1])
             Turn.GetComponent<Text>().text = ui.turn[0];
     }
+    public static void Victory()
+    {
+        GameObject.Find("Main Camera/Victory Screen").GetComponent<Canvas>().enabled = true;
+        GameObject allies = GameObject.Find("Allies");
+
+        Allies_Movement [] am = allies.GetComponentsInChildren<Allies_Movement>();
+        foreach (Allies_Movement temp in am)
+            temp.enabled = false;
+
+        GameObject.Find("Allies").GetComponent<PlayerAttacks>().enabled = false;
+    }
 }

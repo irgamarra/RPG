@@ -32,6 +32,11 @@ public class HealthBar : MonoBehaviour
         }
 
         fgImage.fillAmount = pct;
+
+        if (fgImage.fillAmount == 0)
+        {
+            Turns.Victory();
+        }
     }
 
     private void LateUpdate()
