@@ -23,8 +23,7 @@ Enemy's attack patterns:
 
 # Next to do:
 
+- 4 different levels
 - To optimize Bouncing Attack for it to not miss their target after bouncing.
 - An understandable GUI
-- Enemy attacks
-- A life system
 - A way for the player to see which button represents each character.
