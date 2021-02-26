@@ -4,8 +4,13 @@ ScriptsOnlyBuild:
     - Allies_Movement
     - Attacks
     - Ball
+    - ColourlessBall
     - EnemyAttacks
+    - HealthBar
+    - PiercingBall
     - PlayerAttacks
+    - Properties
+    - SOProperties
     - UI
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
@@ -18,6 +23,7 @@ ScriptsOnlyBuild:
     - UnityEngine.EventSystems.StandaloneInputModule
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
+    - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/Scenes/SampleScene.unity:
@@ -52,27 +58,39 @@ ScriptsOnlyBuild:
     - Class: 108
       Script: {instanceID: 0}
     - Class: 114
-      Script: {instanceID: 11152}
+      Script: {instanceID: 11136}
     - Class: 114
       Script: {instanceID: 11310}
     - Class: 114
+      Script: {instanceID: 11350}
+    - Class: 114
       Script: {instanceID: 11554}
     - Class: 114
-      Script: {instanceID: 11734}
+      Script: {instanceID: 11690}
     - Class: 114
-      Script: {instanceID: 11936}
+      Script: {instanceID: 11736}
     - Class: 114
-      Script: {instanceID: 12358}
+      Script: {instanceID: 11882}
     - Class: 114
-      Script: {instanceID: 12456}
+      Script: {instanceID: 11940}
     - Class: 114
-      Script: {instanceID: 12554}
+      Script: {instanceID: 12170}
     - Class: 114
-      Script: {instanceID: 12598}
+      Script: {instanceID: 12364}
     - Class: 114
-      Script: {instanceID: 12922}
+      Script: {instanceID: 12454}
     - Class: 114
-      Script: {instanceID: 12950}
+      Script: {instanceID: 12466}
+    - Class: 114
+      Script: {instanceID: 12564}
+    - Class: 114
+      Script: {instanceID: 12608}
+    - Class: 114
+      Script: {instanceID: 12814}
+    - Class: 114
+      Script: {instanceID: 12934}
+    - Class: 114
+      Script: {instanceID: 12962}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -274,6 +292,12 @@ ScriptsOnlyBuild:
     className: Shadow
   - hash:
       serializedVersion: 2
+      Hash: 29a0718855a20c4d858ab535539d3dd5
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: HealthBar
+  - hash:
+      serializedVersion: 2
       Hash: cc4274b586df3c02688bac01b88bd16c
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.EventSystems
@@ -302,6 +326,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: Selectable
+  - hash:
+      serializedVersion: 2
+      Hash: 378841ceeeff1410e86d6c1093c392c4
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: SOProperties
   - hash:
       serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
@@ -358,6 +388,12 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
+      Hash: e555c8679e1f172045cd1c21c26c4916
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: ColourlessBall
+  - hash:
+      serializedVersion: 2
       Hash: 5ad4aa237d47ac2bab17bacb672edf7a
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
@@ -406,7 +442,7 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
-      Hash: a8956f15cad64fe076f574f5d2b323bb
+      Hash: 161210828f9a55b9e642599e31636342
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: EnemyAttacks
@@ -418,7 +454,13 @@ ScriptsOnlyBuild:
     className: TimelineAsset
   - hash:
       serializedVersion: 2
-      Hash: 643fd0610c4b43431fe67f84029815e0
+      Hash: e555c8679e1f172045cd1c21c26c4916
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: PiercingBall
+  - hash:
+      serializedVersion: 2
+      Hash: da3d0bb0033024ade594f2f9a9441e2a
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Attacks
@@ -466,6 +508,12 @@ ScriptsOnlyBuild:
     className: TMP_StyleSheet
   - hash:
       serializedVersion: 2
+      Hash: 21eae615ac95d65924a6b12b451e3066
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: Properties
+  - hash:
+      serializedVersion: 2
       Hash: 21d73eda81c18eacd2c91ad5dfaf2e32
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -508,7 +556,7 @@ ScriptsOnlyBuild:
     className: TMP_SubMesh
   - hash:
       serializedVersion: 2
-      Hash: 399519ad1cf5b351f9f080c55ffe1a84
+      Hash: e555c8679e1f172045cd1c21c26c4916
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Ball

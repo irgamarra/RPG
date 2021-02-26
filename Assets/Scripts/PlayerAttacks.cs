@@ -40,64 +40,72 @@ public class PlayerAttacks : MonoBehaviour
             //Player's attacks Clock wise
             if (Input.GetButtonDown("Fire4"))
             {
+                if (GameObject.Find("Allies/Cube_A").gameObject != null)
+                {
+                    GameObject player = GameObject.Find("Allies/Cube_A").gameObject;
+                    //TODO: To select a target
+                    GameObject target = GameObject.Find("Allies/Cube_A").gameObject;
 
-                GameObject player = GameObject.Find("Allies/Cube_A").gameObject;
-                //TODO: To select a target
-                GameObject target = GameObject.Find("Allies/Cube_A").gameObject;
+                    //TODO: to have different attacks/to attack depending on the character
+                    //TODO: COLOUR NOT HARDCODED
+                    Vector3 inFront = player.transform.position + (player.transform.forward * 2);
+                    if (!iveAttacked)
+                        attacks.bulletsNumber = 2;
+                    attacks.BouncingBall(inFront, player.transform.rotation, "yellow");
 
-                //TODO: to have different attacks/to attack depending on the character
-                //TODO: COLOUR NOT HARDCODED
-                Vector3 inFront = player.transform.position + (player.transform.forward * 2);
-                if(!iveAttacked)
-                    attacks.bulletsNumber = 2;
-                attacks.BouncingBall(inFront, player.transform.rotation, "yellow");
-
-                iveAttacked = true;
+                    iveAttacked = true;
+                }
             }
 
             if (Input.GetButtonDown("Fire2"))
             {
+                if (GameObject.Find("Allies/Cube_B").gameObject != null)
+                {
+                    GameObject player = GameObject.Find("Allies/Cube_B").gameObject;
+                    //TODO: To select a target
 
-                GameObject player = GameObject.Find("Allies/Cube_B").gameObject;
-                //TODO: To select a target
 
+                    Vector3 inFront = player.transform.position + (player.transform.forward * 2);
+                    if (!iveAttacked)
+                        attacks.bulletsNumber = 1;
+                    attacks.BouncingBall(inFront, player.transform.rotation, "red");
 
-                Vector3 inFront = player.transform.position + (player.transform.forward * 2);
-                if (!iveAttacked)
-                    attacks.bulletsNumber = 1;
-                attacks.BouncingBall(inFront, player.transform.rotation, "red");
-
-                iveAttacked = true;
+                    iveAttacked = true;
+                }
             }
 
             if (Input.GetButtonDown("Fire1"))
             {
+                if (GameObject.Find("Allies/Cube_C").gameObject != null)
+                {
+                    GameObject player = GameObject.Find("Allies/Cube_C").gameObject;
+                    //TODO: To select a target
 
-                GameObject player = GameObject.Find("Allies/Cube_C").gameObject;
-                //TODO: To select a target
 
+                    Vector3 inFront = player.transform.position + (player.transform.forward * 2);
+                    if (!iveAttacked)
+                        attacks.bulletsNumber = 1;
+                    attacks.ColourlessBall(inFront, player.transform.rotation);
 
-                Vector3 inFront = player.transform.position + (player.transform.forward * 2);
-                if (!iveAttacked)
-                    attacks.bulletsNumber = 1;
-                attacks.ColourlessBall(inFront, player.transform.rotation);
-
-                iveAttacked = true;
+                    iveAttacked = true;
+                }
             }
 
             if (Input.GetButtonDown("Fire3"))
             {
+                if (GameObject.Find("Allies/Cube_D").gameObject != null)
+                {
+                    GameObject player = GameObject.Find("Allies/Cube_D").gameObject;
+                    //TODO: To select a target
 
-                GameObject player = GameObject.Find("Allies/Cube_D").gameObject;
-                //TODO: To select a target
 
+                    Vector3 inFront = player.transform.position + (player.transform.forward * 2);
+                    if (!iveAttacked)
+                        attacks.bulletsNumber = 1;
+                    attacks.PiercingBall(inFront, player.transform.rotation, "blue");
 
-                Vector3 inFront = player.transform.position + (player.transform.forward * 2);
-                if (!iveAttacked)
-                    attacks.bulletsNumber = 1;
-                attacks.PiercingBall(inFront, player.transform.rotation, "blue");
-
-                iveAttacked = true;
+                    iveAttacked = true;
+                }
             }
         }
 
